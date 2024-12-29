@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card.dark {
+    background-color: #333;
+    color: white;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}

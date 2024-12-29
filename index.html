@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codewars Felhasználói Adatok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <div class="form-container">
+            <input type="text" id="username" placeholder="Add meg a felhasználónevet" />
+            <button onclick="fetchUserData()">Keresés</button>
+            <button onclick="toggleTheme()">Sötét/Világos Mód</button>
+        </div>
+
+        <div id="user-cards" class="user-cards"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
