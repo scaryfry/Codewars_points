@@ -24,18 +24,18 @@ const displayUserData = (data) => {
     card.classList.add('card');
     if (currentTheme === 'dark') card.classList.add('dark');
 
-    const javascriptSkill = data.skills && data.skills.javascript ? data.skills.javascript : 'Nincs adat';
-    const rank = data.rank || 'Nincs adat';
+    const javascriptSkill = data.ranks.languages.javascript.rank || 'Nincs adat';
+    const rank = data.ranks.overall.name || 'Nincs adat';
     const name = data.name || 'Nincs megadva';
     const clan = data.clan || 'Nincs';
-    const languages = data.languages ? data.languages.join(', ') : 'Nincs adat';
+    const languages = data.ranks.languages ? Object.keys(data.ranks.languages).join(', ') : 'Nincs adat';
 
     card.innerHTML = `
         <h3>${data.username}</h3>
         <p><strong>Név:</strong> ${name}</p>
         <p><strong>Klán:</strong> ${clan}</p>
         <p><strong>Nyelvek:</strong> ${languages}</p>
-        <p><strong>Javascript:</strong> ${javascriptSkill}</p>
+        <p><strong>Javascript rang:</strong> ${javascriptSkill}</p>
         <p><strong>Rang:</strong> ${rank}</p>
     `;
     cardsContainer.appendChild(card);
